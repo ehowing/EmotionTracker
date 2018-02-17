@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_sign_in"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.emilyhowing.emotiontracker2.SignUpActivity"
+    tools:showIn="@layout/activity_sign_in">
+
+    <TextView
+        android:text="Password:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:id="@+id/passwordTextViewSign"
+        android:layout_alignBottom="@+id/passwordEditText"
+        android:fontFamily="casual"
+        android:textSize="18sp" />
+
+    <Button
+        android:text="Go to login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/goToLoginButton"
+        android:layout_marginBottom="27dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:backgroundTint="@android:color/holo_blue_dark" />
+
+    <Button
+        android:text="Click to sign up!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/signInButton"
+        android:layout_above="@+id/goToLoginButton"
+        android:layout_alignEnd="@+id/signUpTextView"
+        android:layout_marginBottom="45dp"
+        android:backgroundTint="@android:color/holo_orange_light" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/emailEditText"
+        android:layout_above="@+id/passwordEditText"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/passwordEditText"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Sign Up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/signUpTextView"
+        android:textSize="36sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:fontFamily="casual" />
+
+    <TextView
+        android:text="Email:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/emailTextViewSign"
+        android:fontFamily="casual"
+        android:textSize="18sp"
+        android:layout_alignBaseline="@+id/emailEditText"
+        android:layout_alignBottom="@+id/emailEditText"
+        android:layout_alignEnd="@+id/passwordTextViewSign" />
+
+
+</RelativeLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+
+    android:paddingTop="0dp"
+
+    android:fitsSystemWindows="true"
+    tools:context="com.example.emilyhowing.emotiontracker2.CommentActivity"
+
+    >
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/black"
+        android:theme="?attr/actionBarTheme"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="330dp"
+        android:paddingTop = "0dp"
+        android:id="@+id/toolbar2" >
+
+
+    </android.support.v7.widget.Toolbar>
+
+
+
+    <LinearLayout
+        android:id="@+id/add_task_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+
+
+        <include layout="@layout/content_main" />
+
+
+    </LinearLayout>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:fabSize="mini"
+        app:srcCompat="@android:drawable/ic_menu_my_calendar"
+        android:id="@+id/goToEmotionScreen"
+        app:backgroundTint="@android:color/holo_orange_light"
+        android:tint="@android:color/holo_blue_light"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="19dp"
+        android:layout_alignBottom="@+id/add_task_wrapper"
+        android:layout_alignParentStart="true"
+         />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/addCommentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:srcCompat="@android:drawable/ic_input_add"
+        app:backgroundTint="@android:color/holo_blue_light"
+        android:tint="@android:color/holo_orange_light"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerViewComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:scrollbars="none"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/logOutButtonComment"
+        android:layout_below="@+id/toolbarTitle" />
+
+    <Button
+        android:text="Log Out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/logOutButtonComment"
+        android:layout_alignParentBottom="true"
+        android:layout_alignTop="@+id/goToEmotionScreen"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:backgroundTint="@color/common_google_signin_btn_text_light_focused"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Forum"
+        android:gravity = "center"
+        android:textSize="44dp"
+        android:textColor="@android:color/white"
+        android:id="@+id/toolbarTitle"
+        android:elevation="19dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textStyle="normal|bold"
+        android:layout_alignBottom="@id/toolbar2"
+        android:layout_alignEnd="@id/addCommentButton" />
+
+
+</RelativeLayout>

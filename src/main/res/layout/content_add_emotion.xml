@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_add_emotion"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.emilyhowing.emotiontracker2.AddEmotionActivity"
+    tools:showIn="@layout/activity_add_emotion">
+
+
+    <Button
+        android:text="Save "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/saveButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:backgroundTint="@android:color/holo_orange_light" />
+
+    <TextView
+        android:text="Add an Emotion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:id="@+id/addEmotionTextView"
+        android:textSize="36sp"
+        android:fontFamily="casual" />
+
+    <TextView
+        android:text="Emotion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/commentTextView"
+        android:textSize="18sp"
+        android:layout_alignBottom="@+id/emotionEditText"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/emotionEditText"
+        android:hint="emotion"
+        android:layout_marginBottom="41dp"
+        android:layout_above="@+id/dateEditText"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/dateEditText"
+        android:hint="date"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/timeEditText" />
+
+    <TextView
+        android:text="Choose a color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/colorTextView"
+        android:textSize="18sp"
+        android:layout_marginBottom="20dp"
+        android:layout_above="@+id/saveButton"
+        android:layout_alignStart="@+id/dateTextView" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:layout_alignBottom="@+id/colorTextView"
+        android:layout_alignStart="@+id/dateEditText"
+        android:layout_marginStart="19dp" />
+
+    <TextView
+        android:text="Date                  "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dateTextView"
+        android:textSize="18sp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/timeEditText"
+        android:hint="time"
+        android:layout_alignBaseline="@+id/timeTextView"
+        android:layout_alignBottom="@+id/timeTextView"
+        android:layout_alignParentEnd="true" />
+
+
+
+    <TextView
+        android:text="Time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/timeTextView"
+        android:textSize="18sp"
+        android:layout_below="@+id/dateEditText"
+        android:layout_marginTop="46dp"
+        android:layout_alignEnd="@+id/commentTextView"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Add current and date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/currentTimeAndDateButton"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:layout_below="@+id/timeEditText"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/colorTextView" />
+
+    <Switch
+        android:text="am/pm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:textOff="am"
+        android:textOn="pm"
+        android:id="@+id/switch1"
+        android:layout_marginEnd="20dp"
+        android:layout_alignBaseline="@+id/currentTimeAndDateButton"
+        android:layout_alignBottom="@+id/currentTimeAndDateButton"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="(use slashes)"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/useSlashesTextView"
+        android:layout_below="@+id/dateTextView" />
+
+</RelativeLayout>
